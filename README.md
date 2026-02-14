@@ -19,6 +19,9 @@ This small project demonstrates:
     python app.py
     The API will be available at http://127.0.0.1:6000
 
+or 
+gunicorn --workers 3 --bind 127.0.0.1:6000 wsgi:app
+
 4. Example request:
     curl -X POST http://127.0.0.1:6000/predict -H "Content-Type: application/json" -d '{"text":"I want to cancel my subscription"}'
 
